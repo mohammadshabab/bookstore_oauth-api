@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/mohammadshabab/bookstore_oauth-api/src/utils/crypto_utils"
 	"github.com/mohammadshabab/bookstore_utils-go/rest_errors"
-	"github.com/testDomain/bookstore_users-api/utils/crypto_utils"
 )
 
 const (
@@ -74,11 +74,6 @@ func GetNewAccessToken(userId int64) AccessToken {
 }
 
 func (at AccessToken) IsExpired() bool {
-	// now := time.Now().UTC()
-	// expirationTime := time.Unix(at.Expires, 0)
-	// fmt.Println(expirationTime)
-	// return time.Now().UTC().Before(now)
-
 	return time.Unix(at.Expires, 0).Before(time.Now().UTC())
 }
 
