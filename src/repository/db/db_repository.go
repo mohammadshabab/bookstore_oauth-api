@@ -7,7 +7,6 @@ import (
 	"github.com/mohammadshabab/bookstore_oauth-api/src/client/cassandra"
 	"github.com/mohammadshabab/bookstore_oauth-api/src/domain/access_token"
 	"github.com/mohammadshabab/bookstore_utils-go/rest_errors"
-	//"github.com/mohammadshabab/bookstore_oauth-api/utils/errors"
 )
 
 const (
